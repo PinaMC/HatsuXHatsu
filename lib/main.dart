@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/bienvenida.dart';
 import 'package:logger/logger.dart';
 import 'package:google_fonts/google_fonts.dart';
-import 'pages/my_home_page.dart';
-import 'pages/bienvenida.dart';
+//import 'pages/my_home_page.dart';
+//import 'pages/bienvenida.dart';
 
 
 void main() {

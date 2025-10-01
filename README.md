@@ -1,39 +1,98 @@
 
 # Hatsu x Hatsu
 
-HatsuxHatsu es una app que consiste en brindar información sobre el sistema de poder del anime Hunter x Hunter.
+## Datos del creador
 
+- **Nombre**: Vicente Farías Piña
+
+- **Universidad**: Universidad de Talca.
+
+- **Carrera**: Ingeniera en desarrollo de videojuegos y realidad virtual.
+
+- **Modulo**: Programacion para dispositivos moviles.
+
+- **Profesor**: Manuel Moscoso.
+
+---
+## Descripción
+
+Hatsu x Hatsu es una app que consiste en brindar información sobre el sistema de poder del anime Hunter x Hunter, incluye los personajes y de algunos paisajes, proximamente detalle de las clases nen y sus detalles 
+
+---
+
+## ¿Que es el nen?
 El **nen** es una técnica que permite a un ser vivo usar y manipular su propia energía vital (conocida como Aura). La palabra "Nen" también se puede utilizar en una conversación para referirse al aura.
 
 
- Detalle de las principales características y funcionalidades: Es necesario exponer
-principales características y funcionalidades (requerimientos puede ser también) a
-del proyecto a presentar. El siguiente detalle corresponde lo mínimo que se debe
-considerar dentro del README:
-las
-raíz
-a. Descripción del proyecto
-b. Lista de características
-c. Lista de funcionalidades más relevantes
-d. Link de acceso a URL públicas de recursos generados.
+
 
 ## Funcionalidades del proyecto
 
 La app permite navegar entre las distintas pantallas que incluyen, tipos de nen, lugares y personajes del manga.
 
-Al inicio de la aplicación se vera 3 opciones para seleccionar:
+Al inicio de la aplicación se verán opciones en la barra lateral, en las que se podrá seleccionar:
+
+- Personajes
+- Sistemas del nen (por ver)
+- Lugares
+- About
 
 
--Personajes
--Sistemas del nen
--Lugares
+De estas opciones, al pulsarlas se desplegará una nueva pantalla.
 
-Al seleccionar la opcion de personajes se mostrara imagenes con sus respectivos nombres 
+Al seleccionar la opcion de **personajes** se mostrará imágenes de algunos personajes con sus respectivos nombres.
 
+En los **Lugares** se podra ver distintas ubicaciones vistas en el anime.
 
-[Link del repositorio](https://github.com/matiassingers/awesome-readme)
+En ambos casos se podra pulsar encima de ellas y se abrirá el detalle respectivo de la opción elegida con una breve descripción e información relevante.
+
+---
+## Flujo de uso
+
+- Al iniciar, se despliega una barra lateral con 3 opciones principales.  
+- Cada opción abre una nueva pantalla:  
+  - **Personajes**: listado de personajes, cada uno con detalle al pulsar.  
+  - **Lugares**: muestra ubicaciones del anime, con detalle e información relevante.  
+  - **About**: información sobre la aplicación.  
 
 
 ## 🔗 Links
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://github.com/PinaMC)
+[Repositorio](https://github.com/PinaMC/HatsuXHatsu)
 
+[Github creador](https://github.com/PinaMC)
+
+[Link drive](https://drive.google.com/drive/folders/1RJT3qBMVXmNhsZT3MO16P8m3ocQa5NCH)
+
+
+### Diagrama
+
+```mermaid
+mindmap
+  root((Pantalla_Inicial 
+  y bienvenida))
+
+    Lugares
+        AppBar
+        Mapa de HxH
+            Detalles
+        Yorkne City
+            Detalles
+        Greed Island
+            Detalles
+
+    Personajes
+      Gon
+        Detalles
+      AppBar
+      Killua
+        Detalles
+      Kurapika
+        Detalles
+    About 
+        
+        Informacion 
+        Regresar
+        AppBar
+
+    
+```

@@ -4,6 +4,7 @@ import 'lugaresScreen.dart';
 import 'personajesScreen.dart';
 import 'package:google_fonts/google_fonts.dart';
 */
+import 'my_home_page.dart';
 import 'package:logger/logger.dart';
 import '../Funcions/app_drawer.dart';
 
@@ -49,7 +50,8 @@ class AboutScreen extends StatelessWidget {
           ),
           const SizedBox(height: 25),
           ElevatedButton(
-            onPressed: () => Navigator.pop(context),
+            onPressed: () => Navigator.push(context, 
+            MaterialPageRoute(builder: (context) => const MyHomePage(title: 'Hatsu x Hatsu'))),
             child: const Text('Regresar'),
           ),
         ],

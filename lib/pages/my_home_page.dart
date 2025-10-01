@@ -2,10 +2,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/Funcions/app_drawer.dart';
 import 'package:logger/logger.dart';
-import '../../pages/about.dart';
-import 'lugaresScreen.dart';
-import 'personajesScreen.dart';
-import 'package:google_fonts/google_fonts.dart';
+//import 'package:google_fonts/google_fonts.dart';
 
 
 //pagina inicial de la app 
