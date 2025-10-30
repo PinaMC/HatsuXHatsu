@@ -1,3 +1,4 @@
+//ignore_for_file: file_names
 import 'package:flutter/material.dart';
 import 'package:flutter_application_1/pages/lugarYorknewCity.dart';
 /*
@@ -24,7 +25,6 @@ class LugaresScreen extends StatelessWidget {
     "Yorknew City",
     "Greed Island",
   ];
-
 
   @override
   Widget build(BuildContext context) {

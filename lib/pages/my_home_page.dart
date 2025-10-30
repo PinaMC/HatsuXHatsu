@@ -37,6 +37,8 @@ class _MyHomePageState extends State<MyHomePage> {
             SizedBox(
             height: 500,
             child: ListView(
+              //modificar la condicion de Card para que su column tenga una codicion para la cantidad de texto
+              //y si tiene "x" cantidad de carcateres que se reemplace los ultimos 3 caracteres antes de "x" por "..."
               padding: const EdgeInsets.all(8),
               children: <Widget>[
                 Card(
