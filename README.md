@@ -57,7 +57,7 @@ En ambos casos se podra pulsar encima de ellas y se abrirá el detalle respectiv
 
 
 ## 🔗 Links
-[Repositorio](https://github.com/PinaMC/HatsuXHatsu)
+[Repositorio](https://github.com/PinaMC/hatsuxhatsu)
 
 [Github creador](https://github.com/PinaMC)
 

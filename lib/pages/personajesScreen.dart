@@ -1,12 +1,8 @@
+// ignore_for_file: file_names
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/personajeGon.dart';
-/*import 'my_home_page.dart';
-import 'lugaresScreen.dart';
-import 'about.dart';
-import 'package:google_fonts/google_fonts.dart';
-*/
-//import 'package:logger/logger.dart';
+import 'package:hatsuxhatsu/pages/personajeGon.dart';
 import '../Funcions/app_drawer.dart';
+
 
 //Pantalla de la lista de personajes de HxH
 class PersonajesScreen extends StatelessWidget {
@@ -27,11 +23,19 @@ class PersonajesScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
+    final theme = Theme.of(context);
+    final colorScheme = theme.colorScheme;
+
     return Scaffold(
+      backgroundColor: colorScheme.primaryContainer, //  Fondo del scaffold
       appBar: AppBar(
         title: const Text('Personajes de HxH'),
+        backgroundColor: colorScheme.primary, //  Color primario del tema
+        foregroundColor: colorScheme.onPrimary, //  Color sobre primario
+
         // Dejar menu lateral, el Drawer ya lo agrega automáticamente
       ),
+
       drawer: buildAppDrawer(context, current: 'personajes'),
       // Ahora el contenido es una lista de Cards con imágenes
       body: ListView.builder(

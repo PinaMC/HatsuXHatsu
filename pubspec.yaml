@@ -1,4 +1,4 @@
-name: flutter_application_1
+name: hatsuxhatsu
 description: "A new Flutter project."
 # The following line prevents the package from being accidentally published to
 # pub.dev using `flutter pub publish`. This is preferred for private packages.
@@ -30,12 +30,14 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  
+  provider: ^6.1.5+1
   google_fonts: ^6.3.1  
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
   cupertino_icons: ^1.0.8
   logger: ^2.6.1
+  shared_preferences: ^2.5.3
+  
 
   flutter_launcher_icons: ^0.14.4
 
@@ -64,10 +66,6 @@ flutter:
 
 
   assets:
-    - assets/Pixel-Art-Hot-Pepper-2-1.webp
-    - assets/Pixel-Art-Pizza-2.webp
-    - assets/Pixel-Art-Watermelon-3.webp
-
     #Otros
     - assets/Otros/hxh_logo.png
     - assets/Otros/hxh_icono.jpg

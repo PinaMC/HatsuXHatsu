@@ -1,6 +1,6 @@
 //ignore_for_file: file_names
 import 'package:flutter/material.dart';
-import 'package:flutter_application_1/pages/lugarYorknewCity.dart';
+import 'package:hatsuxhatsu/pages/lugarYorknewCity.dart';
 /*
 import 'my_home_page.dart';
 import 'personajesScreen.dart';
@@ -47,13 +47,14 @@ class LugaresScreen extends StatelessWidget {
           child: Card(
             margin: const EdgeInsets.all(10),
             child: Column(
+              
               children: [
                 SizedBox(
-                  width: 120,
-                  height: 120,
+                  width: 150,
+                  height: 150,
                   child: Image.asset(
                     pixelArt[index],
-                    fit: BoxFit.cover,
+                    fit: BoxFit.fitHeight,
                   ),
                 ),
                 const SizedBox(height: 8),
