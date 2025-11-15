@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/favoritos_provider.dart';
 
-class PersonajeGon extends StatelessWidget {
-  const PersonajeGon({super.key});
+class PersonajeKurapika extends StatelessWidget {
+  const PersonajeKurapika({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,22 +14,22 @@ class PersonajeGon extends StatelessWidget {
     return Scaffold(
       backgroundColor: colorScheme.surface,
       appBar: AppBar(
-        title: const Text('Gon Freecss'),
-        backgroundColor: colorScheme.primary,
-        foregroundColor: colorScheme.onPrimary,
+        title: const Text('Kurapika'),
+        backgroundColor: colorScheme.tertiary,
+        foregroundColor: colorScheme.onTertiary,
         elevation: 2,
         actions: [
           Consumer<FavoritesProvider>(
             builder: (context, favProvider, _) {
-              final isFav = favProvider.isFavorite('personaje_gon');
+              final isFav = favProvider.isFavorite('personaje_kurapika');
               return IconButton(
                 icon: Icon(
                   isFav ? Icons.star : Icons.star_border,
-                  color: isFav ? Colors.amber : colorScheme.onPrimary,
+                  color: isFav ? Colors.amber : colorScheme.onTertiary,
                 ),
                 iconSize: 28,
                 onPressed: () {
-                  favProvider.toggleFavorite('personaje_gon');
+                  favProvider.toggleFavorite('personaje_kurapika');
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       content: Text(
@@ -52,18 +52,17 @@ class PersonajeGon extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Imagen con container estilizado
             Center(
               child: Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: colorScheme.primaryContainer,
+                  color: colorScheme.tertiaryContainer,
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12),
                   child: Image.asset(
-                    'assets/Personajes/Gon_DetalleBW.png',
+                    'assets/Personajes/Kurapika_Detalle.png',
                     width: 200,
                     height: 200,
                     fit: BoxFit.cover,
@@ -74,10 +73,9 @@ class PersonajeGon extends StatelessWidget {
 
             const SizedBox(height: 24),
 
-            // Nombre del personaje
             Center(
               child: Text(
-                'Gon Freecss',
+                'Kurapika',
                 style: TextStyle(
                   fontSize: 28,
                   color: colorScheme.onSurface,
@@ -88,20 +86,19 @@ class PersonajeGon extends StatelessWidget {
 
             const SizedBox(height: 8),
 
-            // Subtítulo
             Center(
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
                 decoration: BoxDecoration(
-                  color: colorScheme.primaryContainer,
+                  color: colorScheme.tertiaryContainer,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Text(
-                  'Protagonista Principal',
+                  'Último superviviente del Clan Kurta',
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
-                    color: colorScheme.onPrimaryContainer,
+                    color: colorScheme.onTertiaryContainer,
                   ),
                 ),
               ),
@@ -109,18 +106,16 @@ class PersonajeGon extends StatelessWidget {
 
             const SizedBox(height: 24),
 
-            // Información principal
             _buildInfoCard(
               context,
               title: 'Descripción',
               content:
-                  'Gon Freecss es el principal protagonista de Hunter x Hunter. Es un joven cazador con una personalidad alegre y determinada. Su objetivo principal es encontrar a su padre, Ging Freecss, quien también es un cazador legendario. A lo largo de la serie, Gon demuestra ser valiente, leal y poseer una gran habilidad para el combate y el uso del Nen.',
-              color: colorScheme.primaryContainer,
+                  'Kurapika es el último miembro superviviente del Clan Kurta, masacrado por la Brigada Fantasma para robar sus ojos escarlata. Es inteligente, calculador y está consumido por su deseo de venganza. A pesar de su sed de justicia, mantiene un fuerte sentido moral y cuida profundamente de sus amigos. Es serio, reservado y extremadamente dedicado a su objetivo.',
+              color: colorScheme.tertiaryContainer,
             ),
 
             const SizedBox(height: 16),
 
-            // Características
             Text(
               'Características',
               style: TextStyle(
@@ -135,27 +130,26 @@ class PersonajeGon extends StatelessWidget {
             _buildFeatureItem(
               context,
               title: 'Tipo de Nen',
-              value: 'Intensificación',
-              icon: Icons.fitness_center,
+              value: 'Materialización / Especialización (ojos escarlata)',
+              icon: Icons.construction,
             ),
 
             _buildFeatureItem(
               context,
               title: 'Habilidad principal',
-              value: 'Jajanken (Piedra, Papel, Tijera)',
+              value: 'Holy Chain (Cadenas Sagradas)',
               icon: Icons.flash_on,
             ),
 
             _buildFeatureItem(
               context,
               title: 'Personalidad',
-              value: 'Optimista, determinado y leal',
+              value: 'Inteligente, calculador y vengativo',
               icon: Icons.psychology,
             ),
 
             const SizedBox(height: 24),
 
-            // Botón de regresar
             SizedBox(
               width: double.infinity,
               child: ElevatedButton.icon(
@@ -164,8 +158,8 @@ class PersonajeGon extends StatelessWidget {
                 label: const Text('Regresar'),
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(vertical: 16),
-                  backgroundColor: colorScheme.primary,
-                  foregroundColor: colorScheme.onPrimary,
+                  backgroundColor: colorScheme.tertiary,
+                  foregroundColor: colorScheme.onTertiary,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -223,7 +217,7 @@ class PersonajeGon extends StatelessWidget {
       child: Container(
         padding: const EdgeInsets.all(12),
         decoration: BoxDecoration(
-          color: colorScheme.surfaceContainer.withValues(alpha: 0.5),
+          color: colorScheme.surfaceVariant.withValues(alpha: 0.5),
           borderRadius: BorderRadius.circular(8),
           border: Border.all(
             color: colorScheme.outline.withValues(alpha: 0.2),
@@ -234,10 +228,10 @@ class PersonajeGon extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: colorScheme.primaryContainer,
+                color: colorScheme.tertiaryContainer,
                 borderRadius: BorderRadius.circular(8),
               ),
-              child: Icon(icon, size: 20, color: colorScheme.primary),
+              child: Icon(icon, size: 20, color: colorScheme.tertiary),
             ),
             const SizedBox(width: 12),
             Expanded(

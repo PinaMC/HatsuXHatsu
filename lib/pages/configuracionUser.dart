@@ -16,7 +16,7 @@ class SettingsScreen extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: const Text('Configuración de Usuario'),
+        title: const Text('Configuración y Preferencias'),
         foregroundColor: Theme.of(context).colorScheme.onPrimaryContainer,
       ),
       drawer: buildAppDrawer(context, current: 'configuracion'),
@@ -69,7 +69,7 @@ class SettingsScreen extends StatelessWidget {
           Consumer<ThemeProvider>(
             builder: (context, themeProvider, child) {
               final isDark = themeProvider.isDarkMode;
-              
+
               return Container(
                 decoration: BoxDecoration(
                   borderRadius: BorderRadius.circular(12),
@@ -206,7 +206,7 @@ class SettingsScreen extends StatelessWidget {
                           shape: BoxShape.circle,
                           color: isSelected
                               ? Theme.of(context).colorScheme.primaryContainer
-                              : Theme.of(context).colorScheme.surfaceVariant,
+                              : Theme.of(context).colorScheme.surfaceContainer,
                         ),
                         child: Icon(
                           isSelected ? Icons.check_circle : Icons.circle_outlined,
@@ -302,7 +302,7 @@ class SettingsScreen extends StatelessWidget {
               ),
               const SizedBox(width: 8),
               Text(
-                'Otras Configuraciones',
+                'Otras Preferencias',
                 style: TextStyle(fontSize: 20, color: Theme.of(context).colorScheme.onSurface, fontWeight: FontWeight.w600),
               ),
             ],
@@ -320,12 +320,13 @@ class SettingsScreen extends StatelessWidget {
               trailing: const Icon(Icons.chevron_right),
               onTap: () {
                 logger.d('Navegando a Notificaciones');
-                ScaffoldMessenger.of(context).showSnackBar(
+                /*ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
-                    content: Text('Próximamente: Configuración de notificaciones'),
+                    content: Text('Configuración de notificaciones'),
                     duration: Duration(seconds: 2),
                   ),
                 );
+                */
               },
             ),
           ),
@@ -342,12 +343,14 @@ class SettingsScreen extends StatelessWidget {
               trailing: const Icon(Icons.chevron_right),
               onTap: () {
                 logger.d('Navegando a Sonidos');
+                /*
                 ScaffoldMessenger.of(context).showSnackBar(
                   const SnackBar(
                     content: Text('Próximamente: Configuración de sonidos'),
                     duration: Duration(seconds: 2),
                   ),
                 );
+                */
               },
             ),
           ),
@@ -361,7 +364,7 @@ class SettingsScreen extends StatelessWidget {
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
                   
-                  color: Theme.of(context).colorScheme.surfaceVariant.withValues(alpha:0.3),
+                  color: Theme.of(context).colorScheme.surfaceContainer.withValues(alpha:0.3),
                   borderRadius: BorderRadius.circular(12),
                   border: Border.all(
                     color: Theme.of(context).colorScheme.outline.withValues(alpha:0.2),

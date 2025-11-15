@@ -81,11 +81,11 @@ class _MyHomePageState extends State<MyHomePage> {
     final colorScheme = theme.colorScheme;
 
     return Card(
-      margin: const EdgeInsets.all(10),
+      margin: const EdgeInsets.all(5),
       elevation: 2,
       color: colorScheme.surfaceContainerHighest, //  Color del tema
       child: Padding(
-        padding: const EdgeInsets.all(12.0),
+        padding: const EdgeInsets.all(14.0),
         child: Row(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [

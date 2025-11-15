@@ -3,8 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import '../providers/favoritos_provider.dart';
 
-class PersonajeGon extends StatelessWidget {
-  const PersonajeGon({super.key});
+class PersonajeKillua extends StatelessWidget {
+  const PersonajeKillua({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -14,22 +14,22 @@ class PersonajeGon extends StatelessWidget {
     return Scaffold(
       backgroundColor: colorScheme.surface,
       appBar: AppBar(
-        title: const Text('Gon Freecss'),
-        backgroundColor: colorScheme.primary,
-        foregroundColor: colorScheme.onPrimary,
+        title: const Text('Killua Zoldyck'),
+        backgroundColor: colorScheme.secondary,
+        foregroundColor: colorScheme.onSecondary,
         elevation: 2,
         actions: [
           Consumer<FavoritesProvider>(
             builder: (context, favProvider, _) {
-              final isFav = favProvider.isFavorite('personaje_gon');
+              final isFav = favProvider.isFavorite('personaje_killua');
               return IconButton(
                 icon: Icon(
                   isFav ? Icons.star : Icons.star_border,
-                  color: isFav ? Colors.amber : colorScheme.onPrimary,
+                  color: isFav ? Colors.amber : colorScheme.onSecondary,
                 ),
                 iconSize: 28,
                 onPressed: () {
-                  favProvider.toggleFavorite('personaje_gon');
+                  favProvider.toggleFavorite('personaje_killua');
                   ScaffoldMessenger.of(context).showSnackBar(
                     SnackBar(
                       content: Text(
@@ -52,18 +52,17 @@ class PersonajeGon extends StatelessWidget {
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
-            // Imagen con container estilizado
             Center(
               child: Container(
                 padding: const EdgeInsets.all(16),
                 decoration: BoxDecoration(
-                  color: colorScheme.primaryContainer,
+                  color: colorScheme.secondaryContainer,
                   borderRadius: BorderRadius.circular(16),
                 ),
                 child: ClipRRect(
                   borderRadius: BorderRadius.circular(12),
                   child: Image.asset(
-                    'assets/Personajes/Gon_DetalleBW.png',
+                    'assets/Personajes/Killua_Detalle.jpg',
                     width: 200,
                     height: 200,
                     fit: BoxFit.cover,
@@ -74,10 +73,9 @@ class PersonajeGon extends StatelessWidget {
 
             const SizedBox(height: 24),
 
-            // Nombre del personaje
             Center(
               child: Text(
-                'Gon Freecss',
+                'Killua Zoldyck',
                 style: TextStyle(
                   fontSize: 28,
                   color: colorScheme.onSurface,
@@ -88,20 +86,19 @@ class PersonajeGon extends StatelessWidget {
 
             const SizedBox(height: 8),
 
-            // Subtítulo
             Center(
               child: Container(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 6),
                 decoration: BoxDecoration(
-                  color: colorScheme.primaryContainer,
+                  color: colorScheme.secondaryContainer,
                   borderRadius: BorderRadius.circular(20),
                 ),
                 child: Text(
-                  'Protagonista Principal',
+                  'Heredero de los Zoldyck',
                   style: TextStyle(
                     fontSize: 14,
                     fontWeight: FontWeight.w600,
-                    color: colorScheme.onPrimaryContainer,
+                    color: colorScheme.onSecondaryContainer,
                   ),
                 ),
               ),
@@ -109,18 +106,16 @@ class PersonajeGon extends StatelessWidget {
 
             const SizedBox(height: 24),
 
-            // Información principal
             _buildInfoCard(
               context,
               title: 'Descripción',
               content:
-                  'Gon Freecss es el principal protagonista de Hunter x Hunter. Es un joven cazador con una personalidad alegre y determinada. Su objetivo principal es encontrar a su padre, Ging Freecss, quien también es un cazador legendario. A lo largo de la serie, Gon demuestra ser valiente, leal y poseer una gran habilidad para el combate y el uso del Nen.',
-              color: colorScheme.primaryContainer,
+                  'Killua Zoldyck es el tercer hijo de la familia Zoldyck, una famosa dinastía de asesinos. A pesar de su crianza como asesino, Killua busca forjar su propio camino y vivir una vida normal. Es el mejor amigo de Gon y posee habilidades de combate excepcionales. Es inteligente, estratégico y extremadamente leal a sus amigos, aunque inicialmente puede parecer distante o cínico.',
+              color: colorScheme.secondaryContainer,
             ),
 
             const SizedBox(height: 16),
 
-            // Características
             Text(
               'Características',
               style: TextStyle(
@@ -135,27 +130,26 @@ class PersonajeGon extends StatelessWidget {
             _buildFeatureItem(
               context,
               title: 'Tipo de Nen',
-              value: 'Intensificación',
-              icon: Icons.fitness_center,
+              value: 'Transmutación',
+              icon: Icons.water_drop,
             ),
 
             _buildFeatureItem(
               context,
               title: 'Habilidad principal',
-              value: 'Jajanken (Piedra, Papel, Tijera)',
+              value: 'Godspeed (Velocidad Divina)',
               icon: Icons.flash_on,
             ),
 
             _buildFeatureItem(
               context,
               title: 'Personalidad',
-              value: 'Optimista, determinado y leal',
+              value: 'Estratégico, leal y reflexivo',
               icon: Icons.psychology,
             ),
 
             const SizedBox(height: 24),
 
-            // Botón de regresar
             SizedBox(
               width: double.infinity,
               child: ElevatedButton.icon(
@@ -164,8 +158,8 @@ class PersonajeGon extends StatelessWidget {
                 label: const Text('Regresar'),
                 style: ElevatedButton.styleFrom(
                   padding: const EdgeInsets.symmetric(vertical: 16),
-                  backgroundColor: colorScheme.primary,
-                  foregroundColor: colorScheme.onPrimary,
+                  backgroundColor: colorScheme.secondary,
+                  foregroundColor: colorScheme.onSecondary,
                   shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(12),
                   ),
@@ -234,10 +228,10 @@ class PersonajeGon extends StatelessWidget {
             Container(
               padding: const EdgeInsets.all(8),
               decoration: BoxDecoration(
-                color: colorScheme.primaryContainer,
+                color: colorScheme.secondaryContainer,
                 borderRadius: BorderRadius.circular(8),
               ),
-              child: Icon(icon, size: 20, color: colorScheme.primary),
+              child: Icon(icon, size: 20, color: colorScheme.secondary),
             ),
             const SizedBox(width: 12),
             Expanded(

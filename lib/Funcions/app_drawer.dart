@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
+import 'package:hatsuxhatsu/pages/favoritos.dart';
 import '../pages/my_home_page.dart';
 import '../pages/lugaresScreen.dart';
 import '../pages/personajesScreen.dart';
 import '../pages/about.dart';
 import '../pages/configuracionUser.dart';
+import '../pages/nen_Screen.dart';
+
 import 'package:google_fonts/google_fonts.dart';
 
 // Drawer reutilizable para todas las pantallas
@@ -83,12 +86,35 @@ Drawer buildAppDrawer(BuildContext context, {required String current}) {
                 context,
                 MaterialPageRoute(builder: (context) => const MyHomePage(title: 'Hatsu x Hatsu')),
               );
-            } else {
-              Navigator.pop(context);
-            }
+            } 
+            else {Navigator.pop(context);}
           },
         ),
-
+        // clases de NEN
+        ListTile(
+          leading: Icon(
+            Icons.flash_on,
+            color: current == 'nen' ? colorScheme.primary : colorScheme.onSurfaceVariant,
+          ),
+          title: Text(
+            'Sistema de NEN',
+            style: TextStyle(
+              color: current == 'nen' ? colorScheme.primary : colorScheme.onSurface,
+              fontWeight: current == 'nen' ? FontWeight.bold : FontWeight.normal,
+            ),
+          ),
+          selected: current == 'nen',
+          selectedTileColor: colorScheme.primaryContainer.withValues(alpha:0.3),
+          onTap: () {
+            if (current != 'nen') {
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const NenScreen()),
+              );
+            } 
+            else {Navigator.pop(context);}
+          },
+        ),
         // Lugares de HxH
         ListTile(
           leading: Icon(
@@ -110,9 +136,8 @@ Drawer buildAppDrawer(BuildContext context, {required String current}) {
                 context,
                 MaterialPageRoute(builder: (context) => const LugaresScreen()),
               );
-            } else {
-              Navigator.pop(context);
-            }
+            } 
+            else {Navigator.pop(context);}
           },
         ),
 
@@ -137,14 +162,35 @@ Drawer buildAppDrawer(BuildContext context, {required String current}) {
                 context,
                 MaterialPageRoute(builder: (context) => const PersonajesScreen()),
               );
-            } else {
-              Navigator.pop(context);
-            }
+            } 
+            else {Navigator.pop(context);}
           },
         ),
 
         const Divider(), //  Separador visual
-
+        ListTile(
+          leading: Icon(
+            Icons.star,
+            color: current == 'Favoritos' ? colorScheme.primary : colorScheme.onSurfaceVariant,
+          ),
+          title: Text(
+            'Favoritos',
+            style: TextStyle(
+              color: current == 'Favoritos' ? colorScheme.primary : colorScheme.onSurface,
+              fontWeight: current == 'Favoritos' ? FontWeight.bold : FontWeight.normal,
+            ),
+          ),
+          selected: current == 'Favoritos',
+          selectedTileColor: colorScheme.primaryContainer.withValues(alpha:0.3),
+          onTap: (){
+            if(current != 'Favoritos'){
+              Navigator.pushReplacement(
+                context,
+                MaterialPageRoute(builder: (context) => const FavoritosScreen()), //cambiar a pantalla de favoritos
+              );
+            } else{Navigator.pop(context);}
+          },
+        ),
         // Pantalla de configuraciones
         ListTile(
           leading: Icon(
@@ -152,7 +198,7 @@ Drawer buildAppDrawer(BuildContext context, {required String current}) {
             color: current == 'configuracion' ? colorScheme.primary : colorScheme.onSurfaceVariant,
           ),
           title: Text(
-            'Configuraciones',
+            'Configuracion y Preferencias',
             style: TextStyle(
               color: current == 'configuracion' ? colorScheme.primary : colorScheme.onSurface,
               fontWeight: current == 'configuracion' ? FontWeight.bold : FontWeight.normal,
@@ -166,12 +212,10 @@ Drawer buildAppDrawer(BuildContext context, {required String current}) {
                 context,
                 MaterialPageRoute(builder: (context) => const SettingsScreen()),
               );
-            } else {
-              Navigator.pop(context);
-            }
+            } 
+            else {Navigator.pop(context);}
           },
         ),
-
         // Acerca de
         ListTile(
           leading: Icon(
@@ -193,9 +237,8 @@ Drawer buildAppDrawer(BuildContext context, {required String current}) {
                 context,
                 MaterialPageRoute(builder: (context) => const AboutScreen()),
               );
-            } else {
-              Navigator.pop(context);
-            }
+            } 
+            else {Navigator.pop(context);}
           },
         ),
       ],

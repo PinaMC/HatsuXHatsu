@@ -24,17 +24,17 @@ Hatsu x Hatsu es una app que consiste en brindar información sobre el sistema d
 El **nen** es una técnica que permite a un ser vivo usar y manipular su propia energía vital (conocida como Aura). La palabra "Nen" también se puede utilizar en una conversación para referirse al aura.
 
 
-
-
 ## Funcionalidades del proyecto
 
 La app permite navegar entre las distintas pantallas que incluyen, tipos de nen, lugares y personajes del manga.
 
 Al inicio de la aplicación se verán opciones en la barra lateral, en las que se podrá seleccionar:
-
-- Personajes
-- Sistemas del nen (por ver)
+- Home
+- Tipos de Nen
 - Lugares
+- Personajes
+- Favoritos
+- Configuracion
 - About
 
 
@@ -49,11 +49,17 @@ En ambos casos se podra pulsar encima de ellas y se abrirá el detalle respectiv
 ---
 ## Flujo de uso
 
-- Al iniciar, se despliega una barra lateral con 3 opciones principales.  
-- Cada opción abre una nueva pantalla:  
-  - **Personajes**: listado de personajes, cada uno con detalle al pulsar.  
-  - **Lugares**: muestra ubicaciones del anime, con detalle e información relevante.  
-  - **About**: información sobre la aplicación.  
+- Al iniciar, se mostrara una pestaña con un botón de ingreso, posteriormente se mostrará la pantalla principal, la cual mostrará las ultimas noticias de Hunter x Hunter en la aplicación. 
+En la esquina superior izquierda se desplegará una barra lateral con distintas opciones.
+- Cada opción abre una nueva pantalla (excepto si esta en esta misma):  
+  - **HOME**: Lleva al usuario a la pantalla principal al pulsar.  
+  - **Tipos de Nen**: Muestra información relevante sobre qué es el Nen, cada uno con detalle al pulsar.  
+  - **Lugares**: Muestra ubicaciones del anime, con detalle e información relevante.  
+  - **Personajes**: Listado de personajes, cada uno con detalle al pulsar.  
+  - **Favoritos**: Aqui hay una lista con los favoritos del usuario, lo que funciona como un "acceso rápido".
+  - **Configuraciones**: Configuraciones y preferencias principales de la App como temas y elección de light o dark mode
+  - **About**: Información sobre la aplicación y puntuación de la app.
+  
 
 
 ## 🔗 Links

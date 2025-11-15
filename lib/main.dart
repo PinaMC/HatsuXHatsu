@@ -3,17 +3,24 @@ import 'package:provider/provider.dart';
 import 'package:logger/logger.dart';
 import 'pages/bienvenida.dart';
 import 'providers/theme_provider.dart';
+import 'providers/favoritos_provider.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   
-  // Inicializar el provider de temas
+  // Inicializar los providers
   final themeProvider = ThemeProvider();
+  final favoritesProvider = FavoritesProvider(); // NUEVO
+  
   await themeProvider.initialize();
+  await favoritesProvider.initialize(); // NUEVO
   
   runApp(
-    ChangeNotifierProvider.value(
-      value: themeProvider,
+    MultiProvider( // CAMBIO: de ChangeNotifierProvider.value a MultiProvider
+      providers: [
+        ChangeNotifierProvider.value(value: themeProvider),
+        ChangeNotifierProvider.value(value: favoritesProvider), // NUEVO
+      ],
       child: const MyApp(),
     ),
   );

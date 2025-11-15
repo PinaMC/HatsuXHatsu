@@ -16,7 +16,7 @@ class LugarYorknewCity extends StatelessWidget {
           child: Column(
             crossAxisAlignment: CrossAxisAlignment.start,
             children: [
-              Image.asset('assets/Lugares/Yorknew_City2.webp'),
+              Image.asset('assets/Lugares/yorknew.webp'),
               const SizedBox(height: 16),
               const Text(
                 'Yorknew City',
