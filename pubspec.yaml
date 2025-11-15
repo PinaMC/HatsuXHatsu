@@ -40,6 +40,9 @@ dependencies:
   
 
   flutter_launcher_icons: ^0.14.4
+  change_app_package_name: ^1.5.0
+  url_launcher: ^6.2.0
+  flutter_rating_bar: ^4.0.1
 
 
 dev_dependencies:
@@ -63,8 +66,6 @@ flutter:
   # included with your application, so that you can use the icons in
   # the material Icons class.
   uses-material-design: true
-
-
   assets:
     #Otros
     - assets/Otros/hxh_logo.png
@@ -72,13 +73,15 @@ flutter:
     - assets/Otros/Noticias1.webp
     - assets/Otros/Noticias2.webp
     - assets/Otros/Noticias3.webp
-    
+    - assets/feedback_questions.json
+
     #Lugares
     - assets/Lugares/yorknew.webp
+    - assets/Lugares/Yorknew_City2.webp
     - assets/Lugares/Greed_Island.webp
     - assets/Lugares/Mapa_HxH.jpg
     - assets/Lugares/Mapa_HxH2.jpg
-    - assets/Lugares/Yorknew_City2.webp
+    
     
     #Personajes
     - assets/Personajes/Gon_DetalleBW.png
@@ -86,7 +89,15 @@ flutter:
     - assets/Personajes/Killua_Detalle.jpg
     - assets/Personajes/Killua-Head.png
     - assets/Personajes/Leorio-Head.png
+    - assets/Personajes/Leorio_Detalle.png
+    - assets/Personajes/Kurapika-Head.png
+    - assets/Personajes/Kurapika_Detalle.png
 
+    #Clases Nen
+    - assets/nen_assets/clases_Nen1.png
+    - assets/nen_assets/clases_Nen2.png
+    - assets/nen_assets/clases_Nen3.png
+    - assets/nen_assets/clases_NenEsp.png
 
 
   # An image asset can refer to one or more resolution-specific "variants", see

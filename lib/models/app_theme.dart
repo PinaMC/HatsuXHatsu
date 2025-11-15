@@ -21,7 +21,7 @@ class AppTheme {
     required this.description,
   });
 
-  // Lista de todos los temas disponibles (fácil de escalar)
+  // Lista de todos los temas disponibles (esto es para "escalar")
   static const List<AppTheme> availableThemes = [
     AppTheme(
       type: AppThemeType.gon,
@@ -33,7 +33,7 @@ class AppTheme {
       displayName: 'Tema Killua',
       description: 'Inspirado en Killua Zoldyck',
     ),
-    // Agregar más temas aquí en el futuro
+    //aqui se agregan mas temas 
     
   ];
 
